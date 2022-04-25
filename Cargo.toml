@@ -1,0 +1,23 @@
+[package]
+name = "verification_bot"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+dotenv = "0.15"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+[dependencies.serenity]
+version = "0.11"
+default-features = false
+features = ["rustls_backend", "client", "cache", "gateway", "http", "model", "unstable_discord_api"]
+
+[dependencies.sqlx]
+version = "0.5"
+features = ["runtime-tokio-rustls", "sqlite", "macros", "migrate"]
+
+[dependencies.tokio]
+version = "1.17"
+features = ["rt", "rt-multi-thread", "macros", "sync", "signal"]
