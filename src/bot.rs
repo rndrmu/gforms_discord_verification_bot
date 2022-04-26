@@ -224,6 +224,9 @@ impl EventHandler for Bot {
 
                 // match roles 
                 let mut roles = Vec::new();
+
+                roles.push(self.roles.default_member_role);
+
                 if frm.is_18_plus {
                     roles.push(self.roles.fussvolk);
                 }
