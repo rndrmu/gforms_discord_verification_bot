@@ -102,7 +102,7 @@ impl EventHandler for Bot {
                 msg.channel_id.send_message(&ctx, |f| {
                     f.embed(|e| {
                         e.title("New Submission");
-                        e.description("New Submission - However, the user could not be found in the server");
+                        e.description(format!("New Submission - However, the user {} could not be found in the server", answers.discord_tag));
                         e.color(Color::DARK_RED);
                         e
                     })
