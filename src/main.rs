@@ -58,18 +58,16 @@ async fn main() -> Result<(), Error> {
     };
 
     let roles = structs::GuildRoleSettings {
-        boomer:              serenity::model::id::RoleId(968224875175116840),
-        fussvolk:            serenity::model::id::RoleId(968221117569437746),
-        fussvoelkchen:       serenity::model::id::RoleId(968221338483425330),
-        male_role:           serenity::model::id::RoleId(968224375260184666),
-        female_role:         serenity::model::id::RoleId(968221397904134194),
-        others_role:         serenity::model::id::RoleId(968224452166946868),
-        asd_role:            serenity::model::id::RoleId(968224526284492861),
-        non_asd_role:        serenity::model::id::RoleId(968224618391433316),
-        default_member_role: serenity::model::id::RoleId(968224737589338172),
-        f_adult:             serenity::model::id::RoleId(968229905642958908),
-        f_child:             serenity::model::id::RoleId(968230028716408842),
+        boomer:              serenity::model::id::RoleId(877611738198069338),
+        fussvolk:            serenity::model::id::RoleId(877610678704308256),
+        fussvoelkchen:       serenity::model::id::RoleId(877611692027183144),
+        asd_role:            serenity::model::id::RoleId(877610407198617670),
+        non_asd_role:        serenity::model::id::RoleId(877610569241358406),
+        default_member_role: serenity::model::id::RoleId(877609070381629441),
+        f_adult:             serenity::model::id::RoleId(944282189334470737),
+        f_child:             serenity::model::id::RoleId(917568220213440523),
     };
+
 
     let bot = bot::Bot {
         database: sql,

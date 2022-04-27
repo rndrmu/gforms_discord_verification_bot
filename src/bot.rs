@@ -256,13 +256,6 @@ impl EventHandler for Bot {
                     }
                 }
 
-                match frm.gender.as_str() {
-                    "Male" => roles.push(self.roles.male_role),
-                    "Female" => roles.push(self.roles.female_role),
-                    "Other" => roles.push(self.roles.others_role),
-                    _ => unimplemented!("sir")
-                }
-
                 // add user to roles 
                 let usr = UserId(frm.user_id as u64);
                 let mut mem = ctx.http.get_member(msgc.guild_id.unwrap().0, usr.0).await.unwrap();
