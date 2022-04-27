@@ -290,6 +290,13 @@ impl EventHandler for Bot {
                                 b.custom_id("approved");
                                 b.disabled(true);
                                 b
+                            });
+                            a.create_button(|b| {
+                                b.label(format!("Action performed by {}", msgc.user.tag()));
+                                b.style(ButtonStyle::Secondary);
+                                b.custom_id("moderator_action");
+                                b.disabled(true);
+                                b
                             })
                         })
                     })
@@ -338,6 +345,13 @@ impl EventHandler for Bot {
                                 b.label("Banned");
                                 b.style(ButtonStyle::Danger);
                                 b.custom_id("approved");
+                                b.disabled(true);
+                                b
+                            });
+                            a.create_button(|b| {
+                                b.label(format!("Action performed by {}", msgc.user.tag()));
+                                b.style(ButtonStyle::Secondary);
+                                b.custom_id("moderator_action");
                                 b.disabled(true);
                                 b
                             })
@@ -397,6 +411,13 @@ impl EventHandler for Bot {
                                 b.label("Kicked");
                                 b.style(ButtonStyle::Danger);
                                 b.custom_id("approved");
+                                b.disabled(true);
+                                b
+                            });
+                            a.create_button(|b| {
+                                b.label(format!("Action performed by {}", msgc.user.tag()));
+                                b.style(ButtonStyle::Secondary);
+                                b.custom_id("moderator_action");
                                 b.disabled(true);
                                 b
                             })
