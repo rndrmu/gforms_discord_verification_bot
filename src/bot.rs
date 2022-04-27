@@ -69,7 +69,7 @@ impl EventHandler for Bot {
 
     async fn message(&self, ctx: Context, msg: Message) {
 
-        if msg.author.id != serenity::model::prelude::UserId(968148571570446396) {
+        if msg.author.id != serenity::model::prelude::UserId(968523052247818382) {
             return; // only listen to our webhook 
         }
 
