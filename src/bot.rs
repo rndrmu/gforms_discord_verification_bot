@@ -91,7 +91,7 @@ impl EventHandler for Bot {
         let mut user_id = None;
         for member in users_matching_user.iter() {
             if answers.discord_tag.contains(&member.user.name.as_str()) && !member.roles.contains(&self.roles.default_member_role) {
-                user_id = Some(user.user.id);
+                user_id = Some(member.user.id);
                 break;
             }
         }
