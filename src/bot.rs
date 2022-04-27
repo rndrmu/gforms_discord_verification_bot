@@ -243,7 +243,11 @@ impl EventHandler for Bot {
                     roles.push(self.roles.f_child);
                 }
 
-                if frm.is_female && frm.is_18_plus || frm.is_30_plus {
+                if frm.is_female && frm.is_18_plus {
+                    roles.push(self.roles.f_adult);
+                }
+
+                if frm.is_female && frm.is_30_plus {
                     roles.push(self.roles.f_adult);
                 }
 
