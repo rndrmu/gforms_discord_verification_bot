@@ -89,8 +89,8 @@ impl EventHandler for Bot {
 
         // find correct user 
         let mut user_id = None;
-        for user in users_matching_user.iter() {
-            if user.user.tag() == answers.discord_tag {
+        for member in users_matching_user.iter() {
+            if answers.discord_tag.contains(member.user.name) && !member.roles.contains(&self.roles.default_member_role) {
                 user_id = Some(user.user.id);
                 break;
             }
@@ -115,6 +115,7 @@ impl EventHandler for Bot {
         };
 
         let new_msg = msg.channel_id.send_message(&ctx, |f| {
+            f.content(format!("User Mention: <@{}>", uid));
             f.embed(|e| {
                 e.title("New Form Submission");
                 e.color(Color::BLURPLE);
