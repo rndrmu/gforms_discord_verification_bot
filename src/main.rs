@@ -71,7 +71,8 @@ async fn main() -> Result<(), Error> {
 
     let bot = bot::Bot {
         database: sql,
-        roles
+        roles,
+        responses_channel:   serenity::model::id::ChannelId(968522899768094740),
     };
 
 
